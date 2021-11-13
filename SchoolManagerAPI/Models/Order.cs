@@ -9,6 +9,7 @@ namespace SchoolManagerApi.Models
         public long OrderedItemsCount { get; set; } = 0;
         public long DeliveredItemsCount { get; set; } = 0;
         public double TotalPrice { get; set; } = 0;
+        public int RoomNumber { get; set; }
         public Guid? ProductId { get; set; }
         public Product Product { get; set; }
         public string UserId { get; set; }

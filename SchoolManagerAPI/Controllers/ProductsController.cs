@@ -167,7 +167,8 @@ namespace SchoolManagerApi.Controllers
             {
                 Product = product,
                 User = user,
-                OrderedItemsCount = orderDTO.OrderedItemsCount
+                OrderedItemsCount = orderDTO.OrderedItemsCount,
+                RoomNumber = orderDTO.RoomNumber
             };
 
             _dbContext.Orders.Add(order);
@@ -243,7 +244,8 @@ namespace SchoolManagerApi.Controllers
                 DeliveredItemsCount = order.DeliveredItemsCount,
                 AvailableItemsCount = order.Product?.Stock ?? 0,
                 OrderedItemsCount = order.OrderedItemsCount,
-                TotalPrice = order.TotalPrice
+                TotalPrice = order.TotalPrice,
+                RoomNumber = order.RoomNumber
             };
         }
     }
